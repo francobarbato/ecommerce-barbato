@@ -6,22 +6,22 @@ import Cart from './Cart';
 function NavBar() {
     return (
       <>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">SkiShop</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="container-fluid">
+                <a className="navbar-brand" href="#">SkiShop</a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Hombres</a>
+                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul className="navbar-nav">
+                    <li className="nav-item">
+                    <a className="nav-link active" aria-current="page" href="#">Hombres</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Mujeres</a>
+                    <li className="nav-item">
+                    <a className="nav-link" href="#">Mujeres</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Infantiles</a>
+                    <li className="nav-item">
+                    <a className="nav-link" href="#">Infantiles</a>
                     </li>
                 </ul>
                 </div>

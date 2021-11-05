@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Cards(props) {
+function ItemListContainer(props) {
     return (
       <>
         <h3>{props.marca}</h3>
@@ -8,4 +8,4 @@ function Cards(props) {
       </>
     );
 }
-export default Cards;
+export default ItemListContainer;
