@@ -1,11 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './Navbar';
+import NavBar from './componentes/NavBar';
+// import Cart from './componentes/Cart';
+import Cards from './componentes/Cards';
 
 function App() {
   return (
     <>
-    <Navbar/>
+    <NavBar/>
+    <h2>Cascos</h2>
+      <div className="tarjeta">
+        <Cards marca="Shred" color="Negro"/>
+      </div>
+      <div className="tarjeta">
+        <Cards marca="Salomon" color="Rojo"/>
+      </div>
+      <div className="tarjeta">
+        <Cards marca="Blizzard" color="Verde"/>
+      </div>
     </>
   );
 }
