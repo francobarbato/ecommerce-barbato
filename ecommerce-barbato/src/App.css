@@ -41,3 +41,12 @@
   border: solid 2px black;
   width: 25%;
 }
+.ItemCount{
+  margin: 10px;
+}
+.box{
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border: 1px solid #000;
+  width: 10%;
+}
