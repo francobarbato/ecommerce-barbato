@@ -22,9 +22,9 @@ function ItemCount(props){
        return(
         <>
         <div className="ItemCount">
-            <button  type="button" className="btn btn-primary" onClick={increment}>+</button>
-            <option className="box">{unidades}</option>
             <button  type="button" className="btn btn-primary" onClick={decrement}>-</button>
+            <label className="box" for="unidades">{unidades}</label>
+            <button  type="button" className="btn btn-primary" onClick={increment}>+</button>
             <div>
                 <button type="button" className="btn btn-success mt-3" onClick={agregar}>Agregar al Carrito</button>
             </div>
