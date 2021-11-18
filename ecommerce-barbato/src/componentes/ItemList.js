@@ -1,7 +1,7 @@
 const {productos} = require('./Item');
 
 
-    const produccion = () => {
+    const productosPromise = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 if (productos.length > 0) {
@@ -13,4 +13,4 @@ const {productos} = require('./Item');
         })
     }
     
-    export default produccion;
+    export default productosPromise;

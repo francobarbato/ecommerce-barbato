@@ -1,7 +1,6 @@
 import './App.css';
 import NavBar from './componentes/NavBar';
-// import ItemListContainer from './componentes/ItemListContainer';
-import produccion from './componentes/ItemList';
+import productosPromise from './componentes/ItemList';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
   const [datos, setDatos] = useState([]);
 
   useEffect(() =>{
-    produccion()
+    productosPromise()
         .then(result => setDatos(result))
         .catch(err => console.log(err))
 }, [])
