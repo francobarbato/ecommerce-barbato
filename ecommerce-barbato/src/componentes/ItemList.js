@@ -1,25 +1,16 @@
-import {Item} from './Item';
+const {productos} = require('./Item');
 
-function ItemList(){
 
-        
-        let produccion = (timeout, task) =>{
+    const produccion = () => {
         return new Promise((resolve, reject) => {
-            if(Item.length > 0){
-                setTimeout(() => {
-                    resolve(task)
-                }, timeout);
-            }else{
-                reject("no tenemos productos en este momento")
-            }
+            setTimeout(() => {
+                if (productos.length > 0) {
+                    resolve(productos);
+                } else {
+                    reject("no tenemos productos en este momento");
+                }
+            }, 5000);
         })
     }
-
-    produccion(5000, console.log("Cargando los datos..."))
-        .then(() => produccion(3000, console.log(Item[0])))
-        .then(() => produccion(3000, console.log(Item[1])))
-        .then(() => produccion(3000, console.log(Item[2])))
-        .catch(err => console.log(err))
-}
-
-export default ItemList;
+    
+    export default produccion;

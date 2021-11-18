@@ -19,8 +19,6 @@ const productos = [
     }
 ]
 
-function Item(){
-
+module.exports = {
+  productos,
 }
-
-export default Item;
