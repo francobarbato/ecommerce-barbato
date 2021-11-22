@@ -1,39 +1,32 @@
-import { useEffect } from 'react';
-import imagen from './imagenes/casco.jpg';
-const {casco} = require('./ItemDetails');
+import { useEffect, useState } from 'react';
+import ItemDetail from './ItemDetails'
+const {casco} = require('./productos.js');
 
 
+const ItemDetailContainer = () => {
 
-function ItemDetailContainer(){
-
-       const productionPromise = (timeout) => {
-    return new Promise((resolve, reject) => {    
-            if (casco.length > 0) {
-                setTimeout(() => {
-                 resolve(casco);   
-                },timeout);       
-            } else {
-                reject("no tenemos productos para vos");
-            }
-        
-    })
+    const productionPromise = (time) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (casco.length > 0) {
+                    resolve(casco);
+                } else {
+                    reject("No tenesmos este producto disponible");
+                }
+            }, time);
+        });
     }
 
-    useEffect(() =>{
-        productionPromise(5000, casco)
-        .then(() => casco.map(producto => {console.log(producto.name);}))
-        .catch(() => console.log("no hay productos"))
-    }, [])
+    const [dato, setDato] = useState({});
 
-
-    return(
-        <>
-        <div className="tarjeta">
-        <img className="img" src={imagen} alt=""/>
-        <h3>{casco[0].marca}</h3>
-        <div>${casco[0].precio}</div>
-        </div>
-        </>
+    useEffect(() => {
+        productionPromise(2000, casco[0])
+            .then(result => setDato(result))
+            .catch(err => console.log(err))
+    }, []);
+    
+    return (
+        <ItemDetail item={dato} />
     );
 }
 

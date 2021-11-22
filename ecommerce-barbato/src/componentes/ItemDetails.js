@@ -1,13 +1,22 @@
-const casco = [
-    {
-      id: 1,
-      marca: "Shred",
-      img: 5,
-      description:"",
-      precio: 200,
-    },
-]
+import ItemCount from './ItemCount';
+import imagen from './imagenes/casco.jpg';
 
-module.exports = {
-  casco,
+const {casco} = require('./productos.js');
+
+
+
+function ItemDetail(){
+    return(
+        <>
+        <div className="tarjeta">
+        <img className="img" src={imagen} alt=""/>
+        <h3>{casco[0].marca}</h3>
+        <div>${casco[0].precio}</div>
+        <div>Unidades:{casco[0].stock}</div>
+        <ItemCount stock={casco[0].stock} initial={1}/>
+        </div>
+        
+        </>
+    );
 }
+export default ItemDetail;
